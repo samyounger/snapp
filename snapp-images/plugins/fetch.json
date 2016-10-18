@@ -53,7 +53,10 @@
             "id": "cordova-plugin-camera"
         },
         "is_top_level": true,
-        "variables": {}
+        "variables": {
+            "CAMERA_USAGE_DESCRIPTION": " ",
+            "PHOTOLIBRARY_USAGE_DESCRIPTION": " "
+        }
     },
     "cordova-plugin-compat": {
         "source": {
@@ -67,6 +70,15 @@
         "source": {
             "type": "registry",
             "id": "cordova-plugin-file"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-email-composer": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/katzer/cordova-plugin-email-composer.git",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}

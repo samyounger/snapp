@@ -31,7 +31,10 @@
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
         "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.ionicframework.snappimages193453"
+            "PACKAGE_NAME": "com.ionicframework.snappimages168872"
+        },
+        "cordova-plugin-email-composer": {
+            "PACKAGE_NAME": "com.ionicframework.snappimages168872"
         }
     },
     "dependent_plugins": {

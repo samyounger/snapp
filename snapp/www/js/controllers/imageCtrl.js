@@ -1,9 +1,9 @@
 angular
 .module("snapp")
-.controller("MainCtrl", mainCtrl);
+.controller("ImageCtrl", imageCtrl);
 
-mainCtrl.$inject = ["$scope", "$cordovaCamera"];
-function  mainCtrl($scope, $cordovaCamera) {
+imageCtrl.$inject = ["$scope", "$cordovaCamera"];
+function  imageCtrl($scope, $cordovaCamera) {
   const vm = this;
 
   vm.takeImage = function() {
@@ -16,7 +16,7 @@ function  mainCtrl($scope, $cordovaCamera) {
       targetWidth: 250,
       targetHeight: 250,
       popoverOptions: CameraPopoverOptions,
-      saveToPhotoAlbum: false
+      saveToPhotoAlbum: true
     };
 
     $cordovaCamera.getPicture(options).then(function(imageData) {
@@ -25,5 +25,4 @@ function  mainCtrl($scope, $cordovaCamera) {
       // error
     });
   };
-
 }

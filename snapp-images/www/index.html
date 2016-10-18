@@ -37,21 +37,16 @@
 
 </head>
 <body ng-controller="imagesCtrl as images">
-  <!-- <ion-pane>
-    <ion-header-bar class="bar-stable">
-      <h1 class="title">Snapp</h1>
-      <h2>An app to take photos on Phone with</h2>
-    </ion-header-bar>
-    <ion-content> -->
-      <ion-view class="has-header padding" ng-controller="imagesCtrl as images">
-        <button class="button button-energized" ng-click="images.addImage()">
-          Add image
-        </button><br><br>
-        <ion-scroll>
-          <img ng-repeat="image in images" ng-src="{{urlForImage(image)}}" height="200px">
-        </ion-scroll>
-      </ion-view>
-    <!-- </ion-content>
-  </ion-pane> -->
+  <ion-header-bar class="bar-stable">
+    <h1 class="title">Snapp</h1>
+  </ion-header-bar>
+  <ion-content class="has-header padding" ng-controller="imagesCtrl as images">
+    <button class="button button-energized" ng-click="images.addImage()">
+      Add image
+    </button><br><br>
+    <ion-scroll>
+      <img ng-repeat="image in images" ng-src="{{urlForImage(image)}}" height="200px">
+    </ion-scroll>
+  </ion-content>
 </body>
 </html>

@@ -2,14 +2,13 @@ angular
 .module('snapp')
 .controller("imagesCtrl", imagesCtrl);
 
-imagesCtrl.$inject = [];
-function imagesCtrl() {
+imagesCtrl.$inject = ["$cordovaCamera", "$cordovaFile"];
+function imagesCtrl($cordovaCamera, $cordovaFile) {
   const vm = this;
-  // 1
   vm.images = [];
 
   vm.addImage = function() {
-    // 2
+    console.log("add image");
     var options = {
       destinationType : Camera.DestinationType.FILE_URI,
       sourceType : Camera.PictureSourceType.CAMERA, // Camera.PictureSourceType.PHOTOLIBRARY
@@ -75,9 +74,6 @@ function imagesCtrl() {
   };
 
   vm.urlForImage = function(imageName) {
-    var name = imageName.substr(imageName.lastIndexOf('/') + 1);
-    var trueOrigin = cordova.file.dataDirectory + name;
-    return trueOrigin;
+    console.log("get correct path for image");
   };
-
 }

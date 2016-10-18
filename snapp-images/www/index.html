@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head ng-app="snapp">
+<html ng-app="snapp">
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
   <title></title>
@@ -31,18 +31,20 @@
 
 <!-- your app's js -->
 <script src="js/app.js"></script>
+<script src="js/controllers/images.js"></script>
+<script src="js/constants/api.js"></script>
+<script src="js/configs/router.js"></script>
 
 </head>
-<body>
-
+<body ng-controller="imagesCtrl as images">
   <ion-pane>
     <ion-header-bar class="bar-stable">
       <h1 class="title">Snapp</h1>
       <h2>An app to take photos on Phone with</h2>
     </ion-header-bar>
     <ion-content>
-      <ion-view class="has-header padding" ng-controller="imageController as images">
-        <button class="button button-energized" ng-click="addImage()">
+      <ion-view class="has-header padding" ng-controller="imagesCtrl as images">
+        <button class="button button-energized" ng-click="images.addImage()">
           Add image
         </button><br><br>
         <ion-scroll>

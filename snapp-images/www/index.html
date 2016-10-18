@@ -44,8 +44,11 @@
     <button class="button button-energized" ng-click="images.addImage()">
       Add image
     </button><br><br>
+    {{ images.images }}
+    {{ images.data }}
+    {{ images.blah }}
     <ion-scroll>
-      <img ng-repeat="image in images" ng-src="{{urlForImage(image)}}" height="200px">
+      <img ng-repeat="image in images.images" ng-src="{{images.urlForImage(image)}}" height="200px">
     </ion-scroll>
   </ion-content>
 </body>

@@ -8,7 +8,6 @@ function imagesCtrl($cordovaCamera, $cordovaFile) {
   vm.images = [];
 
   vm.addImage = function() {
-    console.log("add image");
     var options = {
       destinationType : Camera.DestinationType.FILE_URI,
       sourceType : Camera.PictureSourceType.CAMERA, // Camera.PictureSourceType.PHOTOLIBRARY
@@ -75,5 +74,8 @@ function imagesCtrl($cordovaCamera, $cordovaFile) {
 
   vm.urlForImage = function(imageName) {
     console.log("get correct path for image");
+    var name = imageName.substr(imageName.lastIndexOf('/') + 1);
+    var trueOrigin = cordova.file.dataDirectory + name;
+    return trueOrigin;
   };
 }

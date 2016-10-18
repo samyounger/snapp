@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="snapp">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -31,15 +31,16 @@
 <script src="cordova.js"></script>
 
 <!-- your app's js -->
+<script src="js/controllers/mainCtrl.js"></script>
 <script src="js/app.js"></script>
 </head>
-<body ng-app="starter" class="platform-ios platform-cordova platform-webview">
+<body ng-controller="MainCtrl as images" class="platform-ios platform-cordova platform-webview">
 
   <ion-pane>
-    <ion-content ng-controller="MainCtrl" padding="true">
-      <img ng-src="{{srcImage || 'img/dummy.jpg'}}" id="srcImage" width="250 " height="250" style="display: block; margin: 0 auto;"><br>
+    <ion-content padding="true">
+      <img ng-src="{{ images.srcImage || 'img/dummy.jpg'}}" id="images.srcImage" width="250 " height="250" style="display: block; margin: 0 auto;"><br>
 
-      <button class="button button-full button-positive " ng-click="takeImage() ">Take Image</button><br>
+      <button class="button button-full button-positive " ng-click="images.takeImage() ">Take Image</button><br>
 
       <div class="list ">
         <label class="item item-input">

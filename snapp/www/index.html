@@ -17,11 +17,12 @@
 </script>-->
 
 <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
+<!-- <link href="css/style.css" rel="stylesheet"> -->
 
-<!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+<!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above -->
+<link href="https://fonts.googleapis.com/css?family=Wendy%20One" rel="stylesheet">
 <link href="css/ionic.app.css" rel="stylesheet">
--->
+
 
 <!-- ionic/angularjs js -->
 <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -37,27 +38,29 @@
 </head>
 <body ng-controller="ImageCtrl as images">
 
-  <ion-pane>
-    <ion-content padding="true">
-      <img ng-src="{{ images.srcImage || 'img/dummy.jpg'}}" id="images.srcImage" width="250 " height="250" style="display: block; margin: 0 auto;"><br>
+  <ion-header-bar align-title="center" class="bar-positive">
+    <h2 class="title">Snapp!</h2>
+  </ion-header-bar>
 
-      <button class="button button-full button-positive " ng-click="images.takeImage() ">Take Image</button><br>
+  <ion-content padding="true" class="has-header">
+    <img ng-src="{{ images.srcImage || 'img/dummy.jpg'}}" id="images.srcImage" width="250 " height="250" style="display: block; margin: 0 auto;"><br>
 
-      <div class="list ">
-        <label class="item item-input">
-          <span class="input-label">First Name:</span>
-          <input type="text" name="name" value="John">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Last Name:</span>
-          <input type="text" name="name" value="Doe">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Age:</span>
-          <input type="text" name="birth" value="01.01.1988">
-        </label>
-      </div>
-    </ion-content>
-  </ion-pane>
+    <button class="button button-full button-positive " ng-click="images.takeImage() ">Take Image</button><br>
+
+    <div class="list ">
+      <label class="item item-input">
+        <span class="input-label">First Name:</span>
+        <input type="text" name="name" value="Clark">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Last Name:</span>
+        <input type="text" name="name" value="Kent">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Age:</span>
+        <input type="text" name="birth" value="01.06.1938">
+      </label>
+    </div>
+  </ion-content>
 </body>
 </html>
